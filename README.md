@@ -13,7 +13,7 @@ This script installs necessary packages and configures repositories to create a 
   Example: `packages_to_install="aaa_base zypper ca-certificates ca-certificates-mozilla timezone"`
 
 - **s_repo**: The main repository URL (e.g., ``).
-  Example: `s_repo=""`
+  Example: `s_repo="http://download.opensuse.org"`
 
 - **repositories**: Array containing information about repositories. Each element follows the format `NAME_REPOSITORY|LOCATION|ALIAS|PRIORITY`.
   Example:
