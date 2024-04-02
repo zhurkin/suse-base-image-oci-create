@@ -19,6 +19,12 @@ This script installs necessary packages and configures repositories to create a 
   Example:
   ```bash
   repositories=(
+    "Main Repository|distribution/leap/15.5/repo/oss/|repo-oss|99"
+    "Update Repository|update/leap/15.5/oss|repo-update|99"
+    "Repository Non-OSS|distribution/leap/15.5/repo/non-oss/|repo-non-oss|99"
+    "Update Repository Non-OSS|update/leap/15.5/non-oss/|repo-update-non-oss|99"
+    "Update repository of openSUSE Backports|update/leap/15.5/backports/|repo-backports-update|99"
+    "Update repository with updates from SUSE Linux Enterprise 15|update/leap/15.5/non-oss/|repo-sle-update|99"
   )
 
 - **archive_path**: The path to save the archive (e.g., `/root`).
