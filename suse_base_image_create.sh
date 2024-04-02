@@ -40,7 +40,7 @@ zypp_cache_dir="$install_dir/var/cache/zypp"
 packages_to_install="aaa_base zypper ca-certificates ca-certificates-mozilla timezone"
 
 # Main repository URL variable
-mos_repo=""
+s_repo=""
 
 # Array with repository information in the format NAME_REPOSITORY|LOCATION|ALIAS
 repositories=(
@@ -89,7 +89,7 @@ add_repositories() {
     for repo_info in "${repositories[@]}"; do
         # Reading repository information
         read -r name location alias priority <<< "$repo_info"
-        uri="${mos_repo}${location}"
+        uri="${s_repo}${location}"
         # Adding repository
         if ! zypper -v -D "$zypp_cache_dir" -C "$zypp_cache_dir" --raw-cache-dir "$zypp_cache_dir" -R "$install_dir" ar -k -n "$name" -p "$priority" "$uri" "$alias"; then
             # If the command fails, set the error flag and continue the loop
